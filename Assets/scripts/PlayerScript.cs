@@ -18,11 +18,9 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         float hori = Input.GetAxis("Horizontal");
-        float vert = Input.GetAxis("Vertical");
         //transform.Translate(Vector3.right * hori * moveSpeed * Time.deltaTime);
         Vector3 moveVect = rb.velocity;
         moveVect.x = hori * moveSpeed;
-        moveVect.y = vert * moveSpeed;
         rb.velocity = moveVect;
         if(Input.GetButtonDown("Fire1"))
         {

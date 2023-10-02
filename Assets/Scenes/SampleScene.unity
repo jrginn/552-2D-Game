@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  projectile: {fileID: 3155935570964604583, guid: 13168c81f544a5042adfac53d465f7b4, type: 3}
 --- !u!212 &2076097275
 SpriteRenderer:
   m_ObjectHideFlags: 0
