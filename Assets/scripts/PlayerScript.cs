@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed = 2.0f;
     Rigidbody2D rb;
+    public GameObject projectile;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,14 @@ public class PlayerScript : MonoBehaviour
         moveVect.x = hori * moveSpeed;
         moveVect.y = vert * moveSpeed;
         rb.velocity = moveVect;
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+        }
+    }
+
+    void shoot()
+    {
+
     }
 }
