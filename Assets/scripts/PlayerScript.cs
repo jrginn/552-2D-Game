@@ -24,12 +24,12 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = moveVect;
         if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            shoot();
         }
     }
 
     void shoot()
     {
-
+        Instantiate(projectile, transform.position, Quaternion.identity);
     }
 }

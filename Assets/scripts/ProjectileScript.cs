@@ -15,6 +15,10 @@ public class ProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+        transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
+        if(transform.position.y < -6)
+        {
+            Destroy(gameObject);
+        }
     }
 }
