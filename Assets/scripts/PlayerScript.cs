@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour
     public float moveSpeed = 2.0f;
     Rigidbody2D rb;
     public GameObject projectile;
+    public float xbound = 9.0f;
+    public float ypos = 4.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,15 @@ public class PlayerScript : MonoBehaviour
         float hori = Input.GetAxis("Horizontal");
         //transform.Translate(Vector3.right * hori * moveSpeed * Time.deltaTime);
         Vector3 moveVect = rb.velocity;
-        moveVect.x = hori * moveSpeed;
+        if (transform.position.x < -xbound) {
+            moveVect.x = 0;
+            transform.position = new Vector3(-xbound, ypos, 0);
+        } else if (transform.position.x > xbound) {
+            moveVect.x = 0;
+            transform.position = new Vector3(xbound, ypos, 0);
+        } else {
+            moveVect.x = hori * moveSpeed;
+        }
         rb.velocity = moveVect;
         if(Input.GetButtonDown("Fire1"))
         {
