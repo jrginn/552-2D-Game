@@ -6,7 +6,8 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject pumpkin;
-    public GameObject crow;
+    public GameObject leftCrow;
+    public GameObject rightCrow;
 
     private Vector2[] pumpkinCoords = new Vector2[12];
     private bool[] pumpkinThere = new bool[12];
@@ -15,9 +16,9 @@ public class SpawnManager : MonoBehaviour
     {
         // populate pumpkinCoords
         int index = 0;
-        for (int i = 0; i < 4; i++)
+        for (int i = -6; i <= 6; i += 4)
         {
-            for (int j = 0; j < 3; j++)
+            for (int j = -4; j <= 2; j += 3)
             {
                 Vector2 pos = new Vector2(i, j);
                 pumpkinCoords[index] = pos;

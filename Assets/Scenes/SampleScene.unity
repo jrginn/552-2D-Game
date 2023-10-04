@@ -215,7 +215,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1172254630
+--- !u!1 &1601046362
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,82 +223,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1172254632}
-  - component: {fileID: 1172254631}
+  - component: {fileID: 1601046364}
+  - component: {fileID: 1601046363}
   m_Layer: 0
-  m_Name: CrowSpawner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1172254631
+--- !u!114 &1601046363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172254630}
+  m_GameObject: {fileID: 1601046362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f955b686160c3164797745259fe8e9ed, type: 3}
+  m_Script: {fileID: 11500000, guid: c6cbca03f70639041a2def5683987d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1172254632
+  pumpkin: {fileID: 721925440656412219, guid: 0788c79b3f19cc34fa02fef3d82a3bc3, type: 3}
+  leftCrow: {fileID: 4588912215263808133, guid: 836b3e64293c3544c8cf7ff3cb76ba76, type: 3}
+  rightCrow: {fileID: 4588912215263808133, guid: d5f50680c894e354ea8023898648c2ba, type: 3}
+--- !u!4 &1601046364
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172254630}
+  m_GameObject: {fileID: 1601046362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6258516, y: -2.1763763, z: -0.04776322}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1517329920
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1517329922}
-  - component: {fileID: 1517329921}
-  m_Layer: 0
-  m_Name: PumpkinSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1517329921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517329920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5c3979ec05fa1438f258eb95666a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pumpkin: {fileID: 0}
---- !u!4 &1517329922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517329920}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7518143, y: 0.5402485, z: -0.008959167}
+  m_LocalPosition: {x: 0.77211773, y: -0.27245125, z: 0.068387635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -439,5 +397,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 2076097276}
-  - {fileID: 1172254632}
-  - {fileID: 1517329922}
+  - {fileID: 1601046364}
