@@ -9,8 +9,9 @@ public class SpawnManager : MonoBehaviour
     public GameObject leftCrow;
     public GameObject rightCrow;
 
-    private Vector2[] pumpkinCoords = new Vector2[12];
-    private bool[] pumpkinThere = new bool[12];
+    private const int pumpkinCount = 12;
+    private Vector2[] pumpkinCoords = new Vector2[pumpkinCount];
+    private bool[] pumpkinThere = new bool[pumpkinCount];
     // Start is called before the first frame update
     void Start()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -9,6 +10,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject projectile;
     public float xbound = 9.0f;
     public float ypos = 4.2f;
+    public float shootDelayTime = 0.5f;
+
+    public bool canShoot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -32,14 +36,23 @@ public class PlayerScript : MonoBehaviour
             moveVect.x = hori * moveSpeed;
         }
         rb.velocity = moveVect;
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && canShoot)
         {
             shoot();
+            canShoot = false;
+            StartCoroutine(ShootDelay());
         }
     }
 
     void shoot()
     {
         Instantiate(projectile, transform.position, Quaternion.identity);
+        //yield return new WaitForSeconds(2.5f);
+    }
+
+    IEnumerator ShootDelay()
+    {
+        yield return new WaitForSeconds(shootDelayTime);
+        canShoot = true;
     }
 }
