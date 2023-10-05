@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pumpkin
   - Projectile
+  - Sprite
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background/Dirt
+    uniqueID: 1106111427
+    locked: 0
+  - name: Background/Fertile Land
+    uniqueID: 2781164041
+    locked: 0
+  - name: Background/Grass
+    uniqueID: 483027521
+    locked: 0
+  - name: Sprites
+    uniqueID: 3957833887
     locked: 0
