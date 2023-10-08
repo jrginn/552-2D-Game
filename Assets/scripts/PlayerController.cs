@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 2.0f;
+    public float moveSpeed = 1.0f;
     Rigidbody2D rb;
     Animator anim;
     public GameObject projectile;
+    public Vector3 projectileOffset = new Vector3(0.3, 0, 0);
     public float shootDelayTime = 0.5f;
-    public float xbound = 9.0f;
-    public float ypos = 4.47f;
+    public float xbound = 7.5f;
+    public float ypos = 4.3f;
 
     public bool canShoot = true;
 
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator shoot()
     {
         canShoot = false;
-        Instantiate(projectile, transform.position, Quaternion.identity);
+        Instantiate(projectile, transform.position + projectileOffset, Quaternion.identity);
         anim.SetTrigger("Shoot");
         yield return new WaitForSeconds(shootDelayTime);
         canShoot = true;

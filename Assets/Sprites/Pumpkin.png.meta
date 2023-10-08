@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f98d198acbafde444a51aa28e1f46509
+guid: 5e1d18cd992ad9e438cac4155c2cac34
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,30 +106,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Scarecrow_Shoot_0
+      name: Pumpkin_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa9d1eb752b537b4cb7e899ef61956aa
-      internalID: 1465750612
+      spriteID: c9723f5c6732f994484f06f0cec34b23
+      internalID: -1216021838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scarecrow_Shoot_1
+      name: Pumpkin_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbb977685d077284aa1924f46d902191
-      internalID: -2024741406
+      spriteID: d3a51c4a38bfcba4da217981faf0f51f
+      internalID: 689693660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scarecrow_Shoot_2
+      name: Pumpkin_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,50 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f0765b5c0151b44c9ac793990a62373
-      internalID: -967472248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Scarecrow_Shoot_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 620ed84469e42344f8993347f649bd62
-      internalID: 1037087044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Scarecrow_Shoot_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a289bbc61fc6014a9b2777e91ca9f33
-      internalID: -1769737532
+      spriteID: 01e1e092c8636d147baeb7b155b43bd0
+      internalID: -463880566
       vertices: []
       indices: 
       edges: []
@@ -238,11 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Scarecrow_Shoot_0: 1465750612
-      Scarecrow_Shoot_1: -2024741406
-      Scarecrow_Shoot_2: -967472248
-      Scarecrow_Shoot_3: 1037087044
-      Scarecrow_Shoot_4: -1769737532
+      Pumpkin_0: -1216021838
+      Pumpkin_1: 689693660
+      Pumpkin_2: -463880566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
