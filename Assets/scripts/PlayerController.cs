@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     public GameObject projectile;
-    public Vector3 projectileOffset = new Vector3(0.3, 0, 0);
+    public Vector3 projectileOffset = new Vector3(0.3f, 0, 0);
     public float shootDelayTime = 0.5f;
     public float xbound = 7.5f;
     public float ypos = 4.3f;
