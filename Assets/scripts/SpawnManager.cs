@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
@@ -10,10 +11,14 @@ public class SpawnManager : MonoBehaviour
     public GameObject pumpkin_2;
     public GameObject leftCrow;
     public GameObject rightCrow;
+    public float crowSpawnRate;
 
     private const int pumpkinCount = 12;
     private Vector2[] pumpkinCoords = new Vector2[pumpkinCount];
     private bool[] pumpkinThere = new bool[pumpkinCount];
+    private float crowTimer = 0;
+    private bool spawnLeft = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +47,34 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(crowTimer < crowSpawnRate)
+        {
+            crowTimer += Time.deltaTime;
+        }
+        else
+        {
+            int index = Random.Range(0, pumpkinCount);
+            // There should always be at least one pumpkin while game is not lost
+            while (!pumpkinThere[index])
+            {
+                index++;
+                if(index == pumpkinCount)
+                {
+                    index = 0;
+                }
+            }
+            if(spawnLeft) 
+            { 
+                Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));    
+                spawnLeft = false;
+            }
+            else
+            {
+                Instantiate(rightCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, -90)));
+                spawnLeft = true;
+            }
+            crowTimer = 0;
+        }
     }
 
     void spawnPumpkin(Vector2 pos)

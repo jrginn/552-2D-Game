@@ -4041,6 +4041,7 @@ MonoBehaviour:
   pumpkin_2: {fileID: 721925440656412219, guid: 07bc9fad75b22d04cb440d3c24b59ecb, type: 3}
   leftCrow: {fileID: 4588912215263808133, guid: 836b3e64293c3544c8cf7ff3cb76ba76, type: 3}
   rightCrow: {fileID: 4588912215263808133, guid: d5f50680c894e354ea8023898648c2ba, type: 3}
+  crowSpawnRate: 3
 --- !u!4 &1601046364
 Transform:
   m_ObjectHideFlags: 0
@@ -4315,7 +4316,11 @@ Transform:
   m_GameObject: {fileID: 2076097273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -6.25, y: 4.3, z: 0}
+=======
+  m_LocalPosition: {x: 0.04, y: 4.3, z: 0}
+>>>>>>> 0f80e6df2f9bfe4c0b1c55155ad885179741fca5
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
