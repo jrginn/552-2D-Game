@@ -11,12 +11,12 @@ public class SpawnManager : MonoBehaviour
     public GameObject pumpkin_2;
     public GameObject leftCrow;
     public GameObject rightCrow;
+    public float crowSpawnRate;
 
     private const int pumpkinCount = 12;
     private Vector2[] pumpkinCoords = new Vector2[pumpkinCount];
     private bool[] pumpkinThere = new bool[pumpkinCount];
     private float crowTimer = 0;
-    private float crowSpawnRate;
     private bool spawnLeft = true;
 
     // Start is called before the first frame update
@@ -65,12 +65,13 @@ public class SpawnManager : MonoBehaviour
             }
             if(spawnLeft) 
             { 
-                Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.identity);    
+                Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));    
                 spawnLeft = false;
             }
             else
             {
-                Instantiate(leftCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.identity);
+                Instantiate(rightCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, -90)));
+                spawnLeft = true;
             }
             crowTimer = 0;
         }
