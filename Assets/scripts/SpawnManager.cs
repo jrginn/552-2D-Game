@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject pumpkin;
+    public GameObject pumpkin_0;
+    public GameObject pumpkin_1;
+    public GameObject pumpkin_2;
     public GameObject leftCrow;
     public GameObject rightCrow;
 
@@ -65,6 +67,6 @@ public class SpawnManager : MonoBehaviour
 
     void spawnPumpkin(Vector2 pos)
     {
-        Instantiate(pumpkin, pos, Quaternion.identity);
+        Instantiate(pumpkin_1, pos, Quaternion.identity);
     }
 }
