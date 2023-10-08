@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     public GameObject projectile;
     public Vector3 projectileOffset = new Vector3(0.3f, 0, 0);
-    public float shootDelayTime = 0.5f;
+    public float shootDelayTime = 1f;
     public float xbound = 7.5f;
     public float ypos = 4.3f;
 
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         }
         
         
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && canShoot)
         {
             StartCoroutine(shoot());
         }
