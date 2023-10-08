@@ -54,6 +54,7 @@ public class SpawnManager : MonoBehaviour
         else
         {
             int index = Random.Range(0, pumpkinCount);
+            // There should always be at least one pumpkin while game is not lost
             while (!pumpkinThere[index])
             {
                 index++;
@@ -62,6 +63,16 @@ public class SpawnManager : MonoBehaviour
                     index = 0;
                 }
             }
+            if(spawnLeft) 
+            { 
+                Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.identity);    
+                spawnLeft = false;
+            }
+            else
+            {
+                Instantiate(leftCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.identity);
+            }
+            crowTimer = 0;
         }
     }
 
