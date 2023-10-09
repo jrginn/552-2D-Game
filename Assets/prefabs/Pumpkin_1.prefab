@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3436931559686876001}
   - component: {fileID: 1154418563523596540}
   - component: {fileID: 3327155245505904126}
+  - component: {fileID: -2652177375360378915}
   m_Layer: 0
   m_Name: Pumpkin_1
   m_TagString: Pumpkin
@@ -131,6 +132,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2652177375360378915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721925440656412219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b50b575e2d597e43aefcc75d383863c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1 &4304258266762032119
 GameObject:
   m_ObjectHideFlags: 0

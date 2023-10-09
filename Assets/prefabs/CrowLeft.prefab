@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2397384248152410319}
   - component: {fileID: 4012591112873790371}
   - component: {fileID: -7405395243061456178}
+  - component: {fileID: 8427082175937523404}
   m_Layer: 0
   m_Name: CrowLeft
-  m_TagString: Untagged
+  m_TagString: Crow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +164,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
+--- !u!114 &8427082175937523404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588912215263808133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b50b575e2d597e43aefcc75d383863c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &8977993758603939259
 GameObject:
   m_ObjectHideFlags: 0

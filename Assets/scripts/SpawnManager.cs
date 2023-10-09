@@ -18,6 +18,8 @@ public class SpawnManager : MonoBehaviour
     private bool[] pumpkinThere = new bool[pumpkinCount];
     private float crowTimer = 0;
     private bool spawnLeft = true;
+    private float powerupSpawnRate;
+    private float powerupTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -75,10 +77,24 @@ public class SpawnManager : MonoBehaviour
             }
             crowTimer = 0;
         }
+
+        if(powerupTimer < powerupSpawnRate)
+        {
+            powerupTimer += Time.deltaTime;
+        }
+        else
+        {
+
+        }
     }
 
     void spawnPumpkin(Vector2 pos)
     {
         Instantiate(pumpkin_1, pos, Quaternion.identity);
+    }
+
+    bool damagedPumpkins()
+    {
+        return true;
     }
 }
