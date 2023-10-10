@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i <= 9; i+= 3)
         {
             index = i + Random.Range(0, 3);
-            spawnPumpkin(pumpkinCoords[index]);
+            SpawnPumpkin(pumpkinCoords[index]);
             pumpkinThere[index] = true;
         }
     }
@@ -88,13 +88,19 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    void spawnPumpkin(Vector2 pos)
+    void SpawnPumpkin(Vector2 pos)
     {
         Instantiate(pumpkin_1, pos, Quaternion.identity);
     }
 
-    bool damagedPumpkins()
+    public void UpdatePumpkinStatus(Vector2 pos, bool alive)
     {
-        return true;
+        // finds correpsonding index
+        int index = 0;
+        while (!pumpkinCoords[index].Equals(pos))
+        {
+            index++;
+        }
+        pumpkinThere[index] = alive;
     }
 }
