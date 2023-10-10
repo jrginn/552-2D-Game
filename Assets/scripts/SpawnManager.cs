@@ -20,6 +20,7 @@ public class SpawnManager : MonoBehaviour
     private bool spawnLeft = true;
     private float powerupSpawnRate;
     private float powerupTimer;
+    private float crowCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,8 @@ public class SpawnManager : MonoBehaviour
             SpawnPumpkin(pumpkinCoords[index]);
             pumpkinThere[index] = true;
         }
+
+        spawnLeft = Random.Range(0, 2) == 1;
     }
 
     // Update is called once per frame
@@ -55,9 +58,10 @@ public class SpawnManager : MonoBehaviour
         }
         else
         {
+            crowCounter++;
             int index = Random.Range(0, pumpkinCount);
             // There should always be at least one pumpkin while game is not lost
-            while (!pumpkinThere[index])
+            while (PumpkinAlive() && !pumpkinThere[index])
             {
                 index++;
                 if(index == pumpkinCount)
@@ -67,13 +71,17 @@ public class SpawnManager : MonoBehaviour
             }
             if(spawnLeft) 
             { 
-                Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));    
-                spawnLeft = false;
+                Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));
+                spawnLeft = Random.Range(0, 2) == 1;
             }
             else
             {
                 Instantiate(rightCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, -90)));
-                spawnLeft = true;
+                spawnLeft = Random.Range(0, 2) == 1;
+            }
+            if(crowCounter % 3 == 0 && crowSpawnRate >= 2f)
+            {
+                crowSpawnRate -= .5f;
             }
             crowTimer = 0;
         }
@@ -102,5 +110,17 @@ public class SpawnManager : MonoBehaviour
             index++;
         }
         pumpkinThere[index] = alive;
+    }
+
+    public bool PumpkinAlive()
+    {
+        for(int i = 0; i < pumpkinThere.Length; i++)
+        {
+            if (pumpkinThere[i])
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
