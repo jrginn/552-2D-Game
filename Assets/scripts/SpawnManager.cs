@@ -11,14 +11,16 @@ public class SpawnManager : MonoBehaviour
     public GameObject pumpkin_2;
     public GameObject leftCrow;
     public GameObject rightCrow;
+    public GameObject addPowerup;
+    public GameObject clearPowerup;
     public float crowSpawnRate;
+    public float powerupSpawnRate;
 
     private const int pumpkinCount = 12;
     private Vector2[] pumpkinCoords = new Vector2[pumpkinCount];
     private bool[] pumpkinThere = new bool[pumpkinCount];
     private float crowTimer = 0;
     private bool spawnLeft = true;
-    private float powerupSpawnRate;
     private float powerupTimer;
     private float crowCounter;
 
@@ -92,7 +94,22 @@ public class SpawnManager : MonoBehaviour
         }
         else
         {
+            // 3/4 chance to spawn powerup
+            if(Random.Range(0, 4) <= 2)
+            {
+                float powerupY = Random.Range(-4, 3);
+                // 1/2 chance to spawn new pumpkin, equal to spawn screen clear
+                if(Random.Range(0,2) == 1)
+                {
+                    Instantiate(addPowerup, new Vector2(-11, powerupY), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(clearPowerup, new Vector2(11, powerupY), Quaternion.identity);
+                }
 
+            }
+            powerupTimer = 0;
         }
     }
 
@@ -123,4 +140,5 @@ public class SpawnManager : MonoBehaviour
         }
         return false;
     }
+
 }

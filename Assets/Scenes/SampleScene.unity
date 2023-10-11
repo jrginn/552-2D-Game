@@ -4041,7 +4041,10 @@ MonoBehaviour:
   pumpkin_2: {fileID: 721925440656412219, guid: 07bc9fad75b22d04cb440d3c24b59ecb, type: 3}
   leftCrow: {fileID: 4588912215263808133, guid: 836b3e64293c3544c8cf7ff3cb76ba76, type: 3}
   rightCrow: {fileID: 4588912215263808133, guid: d5f50680c894e354ea8023898648c2ba, type: 3}
+  addPowerup: {fileID: 595984181975194768, guid: 1393d29b86734214c9b4957b3ac34b4f, type: 3}
+  clearPowerup: {fileID: 6253233278381908867, guid: 2dab79b4296804b4a80bcdc0a957b338, type: 3}
   crowSpawnRate: 3
+  powerupSpawnRate: 1
 --- !u!4 &1601046364
 Transform:
   m_ObjectHideFlags: 0
