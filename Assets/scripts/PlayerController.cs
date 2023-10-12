@@ -61,6 +61,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void DeathAnimation()
+    {
+        print("DIE");
+        anim.SetTrigger("Death");
+    }
+
     IEnumerator shoot()
     {
         canShoot = false;

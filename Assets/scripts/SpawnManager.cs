@@ -54,6 +54,12 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PumpkinAlive())
+        {
+            PlayerController pc = FindAnyObjectByType<PlayerController>();
+            pc.DeathAnimation();
+            enabled = false;
+        }
         if(crowTimer < crowSpawnRate)
         {
             crowTimer += Time.deltaTime;
