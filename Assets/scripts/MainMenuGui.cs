@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,5 +22,10 @@ public class MainMenuGui : MonoBehaviour
     {
         print("test");
         SceneManager.LoadScene("SampleScene");
+    }
+
+    private void QuitGame()
+    {
+        Application.Quit();
     }
 }
