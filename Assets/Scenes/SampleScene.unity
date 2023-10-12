@@ -4639,7 +4639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997409334}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseBehavior, Assembly-CSharp
         m_MethodName: GotoMain
         m_Mode: 1
@@ -4701,6 +4701,7 @@ GameObject:
   - component: {fileID: 1985848380}
   - component: {fileID: 1985848379}
   - component: {fileID: 1985848378}
+  - component: {fileID: 1985848382}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4757,8 +4758,8 @@ Canvas:
   m_GameObject: {fileID: 1985848377}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4791,6 +4792,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1985848382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985848377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e208a28c6b29f646adc58005889bba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1997409332}
 --- !u!1 &1997409332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,7 +4816,6 @@ GameObject:
   - component: {fileID: 1997409333}
   - component: {fileID: 1997409336}
   - component: {fileID: 1997409335}
-  - component: {fileID: 1997409334}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -4831,19 +4844,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 944}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1997409334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997409332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e208a28c6b29f646adc58005889bba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1997409332}
 --- !u!114 &1997409335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5098,7 +5098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997409334}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseBehavior, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

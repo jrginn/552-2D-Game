@@ -17,7 +17,17 @@ public class PauseBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Cancel button (Default: ESC) will be used to pause the game
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if(isPaused)
+            {
+                ResumeGame();
+            } else
+            {
+                PauseGame();
+            }
+        }
     }
 
     public void PauseGame()
