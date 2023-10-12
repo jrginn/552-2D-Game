@@ -23,6 +23,7 @@ public class SpawnManager : MonoBehaviour
     private bool spawnLeft = true;
     private float powerupTimer;
     private float crowCounter;
+    private PlaySFX pumpDeadSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -78,12 +79,16 @@ public class SpawnManager : MonoBehaviour
                 }
             }
             if(spawnLeft) 
-            { 
+            {
+                GetComponent<AudioSource>().loop = false;
+                GetComponent<AudioSource>().Play();
                 Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));
                 spawnLeft = Random.Range(0, 2) == 1;
             }
             else
             {
+                GetComponent<AudioSource>().loop = false;
+                GetComponent<AudioSource>().Play();
                 Instantiate(rightCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, -90)));
                 spawnLeft = Random.Range(0, 2) == 1;
             }
@@ -144,6 +149,8 @@ public class SpawnManager : MonoBehaviour
                 return true;
             }
         }
+        pumpDeadSFX = FindObjectOfType<PlaySFX>();
+        pumpDeadSFX.playPowerUpSound();
         return false;
     }
 

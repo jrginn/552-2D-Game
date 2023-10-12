@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
 
     void Hurt()
     {
+
         health--;
         if(health <= 0)
         {
