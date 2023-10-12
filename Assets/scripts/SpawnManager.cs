@@ -141,4 +141,20 @@ public class SpawnManager : MonoBehaviour
         return false;
     }
 
+    public void SpawnRandomPumpkin()
+    {
+        int index = Random.Range(0, pumpkinCount);
+        while (PumpkinAlive() && pumpkinThere[index])
+        {
+            index++;
+            if (index == pumpkinCount)
+            {
+                index = 0;
+            }
+        }
+        print("about to spawn");
+        SpawnPumpkin(pumpkinCoords[index]);
+        pumpkinThere[index] = true;
+    }
+
 }

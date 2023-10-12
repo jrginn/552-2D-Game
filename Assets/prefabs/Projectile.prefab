@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6410616923318070009}
   - component: {fileID: 5524718586468948444}
   - component: {fileID: 2007551370813682228}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306205728151949630}
   - component: {fileID: 485129357071064383}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

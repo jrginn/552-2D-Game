@@ -4044,7 +4044,7 @@ MonoBehaviour:
   addPowerup: {fileID: 595984181975194768, guid: 1393d29b86734214c9b4957b3ac34b4f, type: 3}
   clearPowerup: {fileID: 6253233278381908867, guid: 2dab79b4296804b4a80bcdc0a957b338, type: 3}
   crowSpawnRate: 3
-  powerupSpawnRate: 1
+  powerupSpawnRate: 10
 --- !u!4 &1601046364
 Transform:
   m_ObjectHideFlags: 0

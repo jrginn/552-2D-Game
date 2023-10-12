@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8736300565173040973}
   - component: {fileID: -6530348382590848749}
   - component: {fileID: -686311026728339337}
-  m_Layer: 0
+  - component: {fileID: 1210665379986517974}
+  m_Layer: 6
   m_Name: Health Powerup
-  m_TagString: Untagged
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +105,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7078186eb3033b4a8c348863707dab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 8
 --- !u!114 &-686311026728339337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +179,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   maxHealth: 1
+--- !u!114 &1210665379986517974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595984181975194768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f355b14ba8bf46544817112c1641b549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2615679836626791891
 GameObject:
   m_ObjectHideFlags: 0

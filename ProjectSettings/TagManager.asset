@@ -8,15 +8,16 @@ TagManager:
   - Projectile
   - Sprite
   - Crow
+  - Powerup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Projectile
   - Water
   - UI
-  - 
-  - 
+  - Powerup
+  - Crow
   - 
   - 
   - 

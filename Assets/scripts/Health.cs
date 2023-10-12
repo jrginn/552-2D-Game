@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
             if (gameObject.tag.Equals("Pumpkin"))
             {
-                Vector2 pos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+                Vector2 pos = new(gameObject.transform.position.x, gameObject.transform.position.y);
                 SpawnManager sm = FindObjectOfType<SpawnManager>();
                 sm.UpdatePumpkinStatus(pos, false);
             }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3777304393051765587}
   - component: {fileID: 95859371413685465}
   - component: {fileID: 8785535014930058083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CrowRight
   m_TagString: Crow
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  maxHealth: 0
 --- !u!1 &7816529553540624970
 GameObject:
   m_ObjectHideFlags: 0
