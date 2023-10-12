@@ -235,6 +235,7 @@ MonoBehaviour:
   sfxPlayer4: {fileID: 0}
   sfxPlayer5: {fileID: 0}
   sfxPlayer6: {fileID: 0}
+  sfx1: {fileID: 0}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +254,7 @@ MonoBehaviour:
   sfxPlayer4: {fileID: 0}
   sfxPlayer5: {fileID: 0}
   sfxPlayer6: {fileID: 0}
+  sfx1: {fileID: 0}
 --- !u!1 &596724589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,6 +3661,7 @@ MonoBehaviour:
   sfxPlayer4: {fileID: 0}
   sfxPlayer5: {fileID: 0}
   sfxPlayer6: {fileID: 0}
+  sfx1: {fileID: 8300000, guid: d98026a495bb6b04396cd1547eba3c7c, type: 3}
 --- !u!1 &1445619066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,6 +5023,8 @@ MonoBehaviour:
   clearPowerup: {fileID: 6253233278381908867, guid: 2dab79b4296804b4a80bcdc0a957b338, type: 3}
   crowSpawnRate: 3
   powerupSpawnRate: 10
+  SFXSpawenerPlayer: {fileID: 0}
+  pumpkinThud: {fileID: 8300000, guid: 804795df33e56d745b43cd37f767bf7d, type: 3}
 --- !u!4 &1601046364
 Transform:
   m_ObjectHideFlags: 0
@@ -5208,7 +5213,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3bded03639a36bc4c9563dd65211ce31, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.745
+  m_Volume: 0.383
   m_Pitch: 1
   Loop: 1
   Mute: 0

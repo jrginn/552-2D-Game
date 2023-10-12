@@ -6,11 +6,9 @@ public class PlaySFX : MonoBehaviour
 {
 
     public AudioSource sfxPlayer;
-    public AudioSource sfxPlayer2;
-    public AudioSource sfxPlayer3;
-    public AudioSource sfxPlayer4;
-    public AudioSource sfxPlayer5;
-    public AudioSource sfxPlayer6;
+    public AudioClip sfx1;
+    public AudioClip sfx2;
+    public AudioClip sfx3;
 
     // Start is called before the first frame update
     void Start()

@@ -7,10 +7,14 @@ public class Health : MonoBehaviour
 {
     public int health;
     public int maxHealth;
+    public AudioSource SFXHealthPlayer;
+    public AudioClip pumpkinThud;
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
+        SFXHealthPlayer = GetComponent<AudioSource>();
+        pumpkinThud = GetComponent<AudioClip>();
     }
 
     // Update is called once per frame
@@ -21,7 +25,7 @@ public class Health : MonoBehaviour
 
     void Hurt()
     {
-
+        SFXHealthPlayer.PlayOneShot(pumpkinThud);
         health--;
         if(health <= 0)
         {

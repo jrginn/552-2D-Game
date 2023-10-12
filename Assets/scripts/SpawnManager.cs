@@ -15,6 +15,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject clearPowerup;
     public float crowSpawnRate;
     public float powerupSpawnRate;
+    public AudioSource SFXSpawenerPlayer;
+    public AudioClip pumpkinThud;
 
     private const int pumpkinCount = 12;
     private Vector2[] pumpkinCoords = new Vector2[pumpkinCount];
@@ -24,6 +26,7 @@ public class SpawnManager : MonoBehaviour
     private float powerupTimer;
     private float crowCounter;
     private PlaySFX pumpDeadSFX;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -149,8 +152,8 @@ public class SpawnManager : MonoBehaviour
                 return true;
             }
         }
-        pumpDeadSFX = FindObjectOfType<PlaySFX>();
-        pumpDeadSFX.playPowerUpSound();
+        
+        
         return false;
     }
 
