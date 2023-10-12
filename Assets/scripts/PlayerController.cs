@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     public GameObject projectile;
+    public GameObject deathScreen; // Death screen to trigger
     public Vector3 projectileOffset = new Vector3(0.3f, 0, 0);
     public float shootDelayTime = 1f;
     public float xbound = 7.5f;
@@ -63,8 +64,8 @@ public class PlayerController : MonoBehaviour
 
     public void DeathAnimation()
     {
-        print("DIE");
         anim.SetTrigger("Death");
+        deathScreen.SendMessage("OnDeath");
     }
 
     IEnumerator shoot()
