@@ -20,7 +20,6 @@ public class MainMenuGui : MonoBehaviour
 
     private void GotoNextScene()
     {
-        print("test");
         SceneManager.LoadScene("SampleScene");
     }
 

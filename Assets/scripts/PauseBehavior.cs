@@ -30,7 +30,7 @@ public class PauseBehavior : MonoBehaviour
         }
     }
 
-    public void PauseGame()
+    public void PauseGame() // Leaving these as public so death screen can pause too
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
