@@ -23,7 +23,8 @@ public class SpawnManager : MonoBehaviour
     private bool spawnLeft = true;
     private float powerupTimer;
     private float crowCounter;
-    
+
+    public GameObject SFX;
 
     // Start is called before the first frame update
     void Start()
@@ -80,11 +81,13 @@ public class SpawnManager : MonoBehaviour
             }
             if(spawnLeft) 
             {
+                SFX.GetComponent<SoundManager>().playCrowCall();
                 Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));
                 spawnLeft = Random.Range(0, 2) == 1;
             }
             else
             {
+                SFX.GetComponent<SoundManager>().playCrowCall();
                 Instantiate(rightCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, -90)));
                 spawnLeft = Random.Range(0, 2) == 1;
             }

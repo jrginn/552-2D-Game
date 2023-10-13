@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     public void DeathAnimation()
     {
+        SFX.GetComponent<SoundManager>().playScarecrowDeath();
         print("DIE");
         anim.SetTrigger("Death");
     }

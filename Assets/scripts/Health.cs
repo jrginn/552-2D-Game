@@ -9,12 +9,14 @@ public class Health : MonoBehaviour
     public int maxHealth;
     public AudioSource SFXHealthPlayer;
     public AudioClip pumpkinThud;
+    public GameObject SFX;
+
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
-        SFXHealthPlayer = GetComponent<AudioSource>();
-        pumpkinThud = GetComponent<AudioClip>();
+        SFX.GetComponent<AudioSource>().Play();
+        
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class Health : MonoBehaviour
 
     void Hurt()
     {
-        SFXHealthPlayer.PlayOneShot(pumpkinThud);
+        //SFX.GetComponent<SoundManager>().playThud();
         health--;
         if(health <= 0)
         {

@@ -36,6 +36,25 @@ public class SoundManager : MonoBehaviour
     }
 
     public void playShootSeed() {
-        audioSource.PlayOneShot(shootSeed);
+        audioSource.PlayOneShot(shootSeedv3);
+    }
+
+    public void playScarecrowDeath()
+    {
+        audioSource.PlayOneShot(scarecrowDeath);
+    }
+    public void playThud()
+    {
+        audioSource.PlayOneShot(pumpkinThud);
+    }
+
+    public void playMenuSelect()
+    {
+        audioSource.PlayOneShot(menuSelection);
+    }
+
+    public void playPowerUpSound()
+    {
+        audioSource.PlayOneShot(powerUpSound);
     }
 }

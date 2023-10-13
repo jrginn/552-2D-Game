@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - SFXHealthPlayer: {instanceID: 0}
+  - SFXHealthPlayer: {fileID: 5042844966788863096, guid: 5c45f86e7d8500c40a51ff85c52ac19e, type: 3}
   - pumpkinThud: {fileID: 8300000, guid: 804795df33e56d745b43cd37f767bf7d, type: 3}
+  - SFX: {fileID: 7193733274411705805, guid: 5c45f86e7d8500c40a51ff85c52ac19e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
