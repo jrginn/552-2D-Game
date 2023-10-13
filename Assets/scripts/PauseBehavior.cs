@@ -8,12 +8,14 @@ public class PauseBehavior : MonoBehaviour
     public static bool isPaused;
     public GameObject pauseMenu;
     public GameObject deathScreen;
+    public GameObject hud;
     // Start is called before the first frame update
     void Start()
     {
         ResumeGame(); // Ensure time scale is 1
         pauseMenu.SetActive(false); // Pause menu disabled by default
         deathScreen.SetActive(false);
+        hud.SetActive(true);
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class PauseBehavior : MonoBehaviour
 
     public void PauseGame()
     {
+        hud.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -42,6 +45,7 @@ public class PauseBehavior : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        hud.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -58,6 +62,7 @@ public class PauseBehavior : MonoBehaviour
 
     public void OnDeath()
     {
+        hud.SetActive(false);
         deathScreen.SetActive(true);
     }
 
