@@ -15,8 +15,6 @@ public class SpawnManager : MonoBehaviour
     public GameObject clearPowerup;
     public float crowSpawnRate;
     public float powerupSpawnRate;
-    public AudioSource SFXSpawenerPlayer;
-    public AudioClip pumpkinThud;
 
     private const int pumpkinCount = 12;
     private Vector2[] pumpkinCoords = new Vector2[pumpkinCount];
@@ -25,7 +23,6 @@ public class SpawnManager : MonoBehaviour
     private bool spawnLeft = true;
     private float powerupTimer;
     private float crowCounter;
-    private PlaySFX pumpDeadSFX;
     
 
     // Start is called before the first frame update
@@ -83,15 +80,11 @@ public class SpawnManager : MonoBehaviour
             }
             if(spawnLeft) 
             {
-                GetComponent<AudioSource>().loop = false;
-                GetComponent<AudioSource>().Play();
                 Instantiate(leftCrow, new Vector2(-11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, 90)));
                 spawnLeft = Random.Range(0, 2) == 1;
             }
             else
             {
-                GetComponent<AudioSource>().loop = false;
-                GetComponent<AudioSource>().Play();
                 Instantiate(rightCrow, new Vector2(11, pumpkinCoords[index].y), Quaternion.Euler(new Vector3(0, 0, -90)));
                 spawnLeft = Random.Range(0, 2) == 1;
             }

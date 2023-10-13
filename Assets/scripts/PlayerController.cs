@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     public float shootDelayTime = 1f;
     public float xbound = 7.5f;
     public float ypos = 4.3f;
-    private DeathSFX deathSFX;
-
     public bool canShoot = true;
+
+    public GameObject SFX;
 
     // Start is called before the first frame update
     void Start()
@@ -65,18 +65,15 @@ public class PlayerController : MonoBehaviour
     public void DeathAnimation()
     {
         print("DIE");
-        deathSFX = FindObjectOfType<DeathSFX>();
-        deathSFX.playDeathSound();
         anim.SetTrigger("Death");
     }
 
     IEnumerator shoot()
     {
         canShoot = false;
-        GetComponent<AudioSource>().loop = false;
-        GetComponent<AudioSource>().Play();
         Instantiate(projectile, transform.position + projectileOffset, Quaternion.identity);
         anim.SetTrigger("Shoot");
+        SFX.GetComponent<SoundManager>().playShootSeed();
         yield return new WaitForSeconds(shootDelayTime);
         canShoot = true;
     }
