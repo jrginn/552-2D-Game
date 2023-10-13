@@ -145,6 +145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  maxHealth: 0
+  SFXHealthPlayer: {fileID: 0}
+  pumpkinThud: {fileID: 8300000, guid: 3bded03639a36bc4c9563dd65211ce31, type: 3}
+  SFX: {fileID: 0}
 --- !u!1 &4304258266762032119
 GameObject:
   m_ObjectHideFlags: 0

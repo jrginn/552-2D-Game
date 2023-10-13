@@ -14,7 +14,7 @@ public class MainMenuGui : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SFX = GetComponent<GameObject>();
     }
 
     // Update is called once per frame

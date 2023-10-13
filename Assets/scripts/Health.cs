@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         maxHealth = health;
-        SFX.GetComponent<AudioSource>().Play();
+        //SFX.GetComponent<AudioSource>().Play();
         
     }
 

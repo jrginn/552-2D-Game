@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - SFX: {instanceID: 0}
+  - SFX: {fileID: 7193733274411705805, guid: 5c45f86e7d8500c40a51ff85c52ac19e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
