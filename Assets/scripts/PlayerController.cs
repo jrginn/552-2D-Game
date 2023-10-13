@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
     public void DeathAnimation()
     {
         anim.SetTrigger("Death");
+        // How do I wait until anim is done?
         deathScreen.SendMessage("OnDeath");
     }
 
