@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
         
         
-        if(Input.GetButtonDown("Fire1") && canShoot)
+        if(!PauseBehavior.isPaused && Input.GetButtonDown("Fire1") && canShoot)
         {
             StartCoroutine(shoot());
         }
