@@ -11,7 +11,7 @@ public class PauseBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResumeGame();
+        ResumeGame(); // Ensure time scale is 1
         pauseMenu.SetActive(false); // Pause menu disabled by default
         deathScreen.SetActive(false);
     }
@@ -58,7 +58,12 @@ public class PauseBehavior : MonoBehaviour
 
     public void OnDeath()
     {
-        PauseGame();
         deathScreen.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        Scene sc = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(sc.name);
     }
 }
