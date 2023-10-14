@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileScript : MonoBehaviour
+public class MoveVertical : MonoBehaviour
 {
     public float moveSpeed = 7.5f;
 
