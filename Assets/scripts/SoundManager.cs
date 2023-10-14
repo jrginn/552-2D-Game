@@ -16,10 +16,15 @@ public class SoundManager : MonoBehaviour
     public AudioClip shootSeedv3;
     public AudioClip pumpkinThudV2;
     // Start is called before the first frame update
-   
+
+    public GameObject SFX;
+
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
+        SFX = GameObject.FindGameObjectWithTag("SoundManager");
+        SFX.GetComponent<SoundManager>().playMenuSelect();
+
     }
 
     // Update is called once per frame
