@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   maxHealth: 1
+  SFX: {fileID: 7193733274411705805, guid: 5c45f86e7d8500c40a51ff85c52ac19e, type: 3}
 --- !u!114 &8289444425632101873
 MonoBehaviour:
   m_ObjectHideFlags: 0

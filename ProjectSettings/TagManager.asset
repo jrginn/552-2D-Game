@@ -9,6 +9,7 @@ TagManager:
   - Sprite
   - Crow
   - Powerup
+  - SoundManager
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     public GameObject projectile;
     public GameObject deathScreen; // Death screen to trigger
+    public float deathAnimTime = 1.2f;
     public Vector3 projectileOffset = new Vector3(0.3f, 0, 0);
     public float shootDelayTime = 1f;
     public float xbound = 7.5f;
@@ -63,11 +64,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void DeathAnimation()
+    public IEnumerator DeathAnimation()
     {
         SFX.GetComponent<SoundManager>().playScarecrowDeath();
         anim.SetTrigger("Death");
-        // How do I wait until anim is done?
+        yield return new WaitForSeconds(deathAnimTime);
         deathScreen.SendMessage("OnDeath");
     }
 

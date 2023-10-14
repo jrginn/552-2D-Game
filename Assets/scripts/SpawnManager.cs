@@ -59,7 +59,7 @@ public class SpawnManager : MonoBehaviour
         if (!PumpkinAlive())
         {
             PlayerController pc = FindAnyObjectByType<PlayerController>();
-            pc.DeathAnimation();
+            StartCoroutine(pc.DeathAnimation());
             enabled = false;
         }
         if(crowTimer < crowSpawnRate)
