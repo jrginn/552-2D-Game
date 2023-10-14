@@ -3649,7 +3649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7568628, g: 0.44705886, b: 0, a: 0.5882353}
+  m_Color: {r: 0.7568628, g: 0.44705886, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6281,7 +6281,7 @@ MonoBehaviour:
   moveSpeed: 5
   projectile: {fileID: 3155935570964604583, guid: 13168c81f544a5042adfac53d465f7b4, type: 3}
   deathScreen: {fileID: 1985848377}
-  deathAnimTime: 1.2
+  deathAnimTime: 1.19
   projectileOffset: {x: 0, y: 0, z: 0}
   shootDelayTime: 0.5
   xbound: 7.5
