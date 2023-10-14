@@ -9,13 +9,13 @@ using UnityEngine.SceneManagement;
 public class MainMenuGui : MonoBehaviour
 {
 
-    public GameObject SFX;
+    //public GameObject SFX;
 
     // Start is called before the first frame update
     void Start()
     {
         //SFX = GetComponent<GameObject>();
-        SFX = GameObject.FindGameObjectWithTag("SoundManager");
+        //SFX = GameObject.FindGameObjectWithTag("SoundManager");
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class MainMenuGui : MonoBehaviour
     private void GotoNextScene()
     {
         //SFX.GetComponent<SoundManager>().playMenuSelect();
-        SFX.GetComponent<SoundManager>().playMenuSelect();
+        //SFX.GetComponent<SoundManager>().playMenuSelect();
         SceneManager.LoadScene("GameScene");
     }
 

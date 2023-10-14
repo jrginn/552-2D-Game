@@ -6570,14 +6570,15 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   clearScreen: {fileID: 8300000, guid: 3cece2fd615469043a88ecfeff91a670, type: 3}
   crowCall: {fileID: 8300000, guid: d98026a495bb6b04396cd1547eba3c7c, type: 3}
-  menuSelection: {fileID: 8300000, guid: bab4a399536fd21408c1ec1ce4cf076e, type: 3}
-  powerUpSound: {fileID: 8300000, guid: 3694d8f34a6b13948b99c8fc611d65cd, type: 3}
+  menuSelection: {fileID: 8300000, guid: 72e741dc956477f44850bcacbfd616a7, type: 3}
+  powerUpSound: {fileID: 8300000, guid: 2f9971175f959dc4db8aaa8a45b5d12a, type: 3}
   pumpkinThud: {fileID: 8300000, guid: 804795df33e56d745b43cd37f767bf7d, type: 3}
   scarecrowDeath: {fileID: 8300000, guid: 180a7bbbfcc691545b14bc25e4e4be10, type: 3}
   shootSeed: {fileID: 8300000, guid: 5405b217c71944c4884d923c53c0bb14, type: 3}
   shootSeedv2: {fileID: 8300000, guid: 9b6962689a089b44ebf819e5b294e21a, type: 3}
   shootSeedv3: {fileID: 8300000, guid: f418913e0598bda41873fec04b503825, type: 3}
   pumpkinThudV2: {fileID: 8300000, guid: 7300e5442ee7cfe40b5b600a0a240adc, type: 3}
+  SFX: {fileID: 0}
 --- !u!4 &3033229072243453300
 Transform:
   m_ObjectHideFlags: 0
