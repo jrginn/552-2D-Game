@@ -26,7 +26,7 @@ public class MainMenuGui : MonoBehaviour
     private void GotoNextScene()
     {
         //SFX.GetComponent<SoundManager>().playMenuSelect();
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameScene");
     }
 
     private void QuitGame()
