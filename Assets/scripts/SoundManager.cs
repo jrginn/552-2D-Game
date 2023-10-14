@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip shootSeed;
     public AudioClip shootSeedv2;
     public AudioClip shootSeedv3;
+    public AudioClip pumpkinThudV2;
     // Start is called before the first frame update
    
     void Start()
@@ -45,7 +46,7 @@ public class SoundManager : MonoBehaviour
     }
     public void playThud()
     {
-        audioSource.PlayOneShot(pumpkinThud);
+        audioSource.PlayOneShot(pumpkinThudV2);
     }
 
     public void playMenuSelect()
