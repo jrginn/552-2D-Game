@@ -57,11 +57,13 @@ public class PauseBehavior : MonoBehaviour
 
     public void GotoMain()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void OnDeath()
     {
+        Time.timeScale = 0f;
         hud.SetActive(false);
         deathScreen.SetActive(true);
     }
