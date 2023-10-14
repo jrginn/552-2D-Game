@@ -31,9 +31,9 @@ public class SpawnManager : MonoBehaviour
     {
         // populate pumpkinCoords
         int index = 0;
-        for (int i = -6; i <= 6; i += 4)
+        for (float i = -5; i <= 5; i += 3.3f)
         {
-            for (int j = -4; j <= 2; j += 3)
+            for (float j = -3; j <= 1; j += 2)
             {
                 Vector2 pos = new Vector2(i, j);
                 pumpkinCoords[index] = pos;
