@@ -26,11 +26,13 @@ public class Health : MonoBehaviour
     void Hurt()
     {
         health--;
+        if (gameObject.tag.Equals("Pumpkin")) {
+            SFX.GetComponent<SoundManager>().playThud();
+        }
         if(health <= 0)
         {
             if (gameObject.tag.Equals("Pumpkin"))
             {
-                SFX.GetComponent<SoundManager>().playThud();
                 Vector2 pos = new(gameObject.transform.position.x, gameObject.transform.position.y);
                 SpawnManager sm = FindObjectOfType<SpawnManager>();
                 sm.UpdatePumpkinStatus(pos, false);
