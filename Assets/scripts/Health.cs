@@ -25,17 +25,17 @@ public class Health : MonoBehaviour
 
     void Hurt()
     {
-        SFX.GetComponent<SoundManager>().playThud();
         health--;
         if(health <= 0)
         {
-            Destroy(gameObject);
             if (gameObject.tag.Equals("Pumpkin"))
             {
+                SFX.GetComponent<SoundManager>().playThud();
                 Vector2 pos = new(gameObject.transform.position.x, gameObject.transform.position.y);
                 SpawnManager sm = FindObjectOfType<SpawnManager>();
                 sm.UpdatePumpkinStatus(pos, false);
             }
+            Destroy(gameObject);
         }
     }
 

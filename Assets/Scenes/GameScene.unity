@@ -6577,6 +6577,7 @@ MonoBehaviour:
   shootSeed: {fileID: 8300000, guid: 5405b217c71944c4884d923c53c0bb14, type: 3}
   shootSeedv2: {fileID: 8300000, guid: 9b6962689a089b44ebf819e5b294e21a, type: 3}
   shootSeedv3: {fileID: 8300000, guid: f418913e0598bda41873fec04b503825, type: 3}
+  pumpkinThudV2: {fileID: 8300000, guid: 7300e5442ee7cfe40b5b600a0a240adc, type: 3}
 --- !u!4 &3033229072243453300
 Transform:
   m_ObjectHideFlags: 0
